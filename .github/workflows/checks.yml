@@ -4,7 +4,7 @@ name: Checks
 on: [push]
 
 jobs:
-  test-link:
+  test-lint:
     name: Test and Lint
     runs-on: ubuntu-20.04
     steps:
@@ -18,4 +18,4 @@ jobs:
       - name: Test
         run: docker compose run --rm app sh -c "python manage.py test"
       - name: Lint
-        run: docker compose run --rm app -sh -c "flake8"
+        run: docker compose run --rm app sh -c "flake8"

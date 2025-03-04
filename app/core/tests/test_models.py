@@ -1,9 +1,13 @@
 """
 Tests for models.
 """
+from decimal import Decimal
+
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 # reference to your custom user model
+
+from core import models
 
 
 class ModelTests(TestCase):

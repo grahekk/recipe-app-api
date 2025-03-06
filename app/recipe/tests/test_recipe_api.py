@@ -214,7 +214,7 @@ class PrivateRecipeAPITests(TestCase):
         """
         Test trying to delete another users recipe gives error.
         """
-        new_user = create_user(email='user@example.com', password='test123')
+        new_user = create_user(email='user2@example.com', password='test123')
         recipe = create_recipe(user=new_user)
 
         url = detail_url(recipe.id)
